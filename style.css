@@ -2,6 +2,10 @@
     text-align: center;
 }
 
+body{
+    background-color :#add8e6;
+}
+
 p{
     text-align: center;
 }
@@ -9,6 +13,6 @@ p{
 .button{
     margin-left: 50%;
 }
-.body{
-    background-color :#FFDEAD;
-}
+
+
+
