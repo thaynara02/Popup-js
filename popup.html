@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="popup.css">
+  <meta charset="UTF-8">
+  <title>Calculadora de abastecimento</title>
+</head>
+<body>
+  <h1>Calculadora de abastecimento</h1>
+
+  <form action="#" method="post">
+    <div class="form-group">
+      <label for="modelo">Modelo do carro</label>
+      <select name="modelo" id="modelo">
+        <option value="Fiat Uno">Fiat Uno</option>
+        <option value="Volkswagen Gol">Volkswagen Gol</option>
+        <option value="Chevrolet Onix">Chevrolet Onix</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="capacidade">Capacidade do tanque (litros)</label>
+      <input type="number" name="capacidade" id="capacidade" value="44" />
+    </div>
+
+    <div class="form-group">
+      <label for="valor">Valor da gasolina (R$/litro)</label>
+      <input type="number" name="valor" id="valor" value="7,50" />
+    </div>
+
+    <button type="submit">Calcular</button>
+  </form>
+
+  <div id="resultado"></div>
+
+  <script>
+    const modelo = document.querySelector("#modelo");
+const capacidade = document.querySelector("#capacidade");
+const valor = document.querySelector("#valor");
+const resultado = document.querySelector("#resultado");
+
+function calcular() {
+  const valorTotal = capacidade.value * valor.value;
+
+  resultado.textContent = `O valor total do abastecimento é de R$${valorTotal.toFixed(2)}`;
+}
+
+modelo.addEventListener("change", calcular);
+capacidade.addEventListener("change", calcular);
+valor.addEventListener("change", calcular);
+
+calcular();
+
+  </script>
+</body>
+</html>
