@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de abastecimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="text-main">Calculadora do valor final da gasolina </br></h1>
+            <p>Esta calculadora serve para dois momentos,<br> 
+                quando quer descobrir quanto se gasta numa viagem com combustível ou quando se<br> 
+                quer descobrir quantos quilômetros é possível andar com um valor fixo,<br> 
+                por exemplo R$ 300,00.<br> 
+                A explicação do uso das duas calculadoras estão abaixo.<br></p>
+
+            <div class="button">
+                <button onclick="abrir('popup.html')" class="btn">Abrir</button>
+            </div>
+
+            <script>
+                function abrir(URL){
+                    window.open(URL);
+                }
+            </script>
+            <script src="popup.html"></script>
+        </div>
+</body>
+</html>
+
+
